@@ -23,7 +23,7 @@ public class Ex04_switch {
 	}
 	public static void ex02() {
 		
-		int day = 123;
+		int day = 13;
 		
 		String weekName;
 		
@@ -83,7 +83,8 @@ public class Ex04_switch {
 		*/
 	} 
 	public static void main(String[] args) {
-		ex04();	
+		ex02
+		();	
 	}
 
 }
