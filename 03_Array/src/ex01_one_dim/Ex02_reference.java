@@ -41,7 +41,12 @@ a[4]|   0   |          │
 		
 		b = a;
 		
+		for(int i = 0; i < b.length; i++) {
+			System.out.println(b[i]);
+		}
 	}
+		
+	
 	
 	public static void ex03() { // 심화
 		
@@ -64,7 +69,7 @@ a[4]|   0   |          │
 	}
 	
 	public static void main(String[] args) {
-		ex03();
+		ex02();
 
  	}
 
