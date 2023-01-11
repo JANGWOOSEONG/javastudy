@@ -2,7 +2,7 @@ package ex05_op_condition;
 
 public class MainClass {
 	
-	public static void ex01() {
+public static void ex01() {
 		
 		int a = 3;
 		int b = 4;
@@ -125,11 +125,11 @@ public class MainClass {
 				
 	}
 	
-	public static void ex08 () {
-		
-	}
+	
 	public static void main(String[] args) {
-		ex07();
+		ex03();
 	}
 
 }
+
+	
