@@ -10,5 +10,7 @@ public class MainClass {
 		student.study();
 		
 	}
+	
+	
 
 }
