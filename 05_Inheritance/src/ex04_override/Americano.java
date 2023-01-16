@@ -6,6 +6,7 @@ package ex04_override;
  	2. 부모 클래스의 메소드와 *동일한 메소드 형식* 으로 자식 클래스가 새로운 메소드를 만드는 것이다.
  	3. 부모 클래스의 메소드를 사용할 수 없기 때문에, 새로운 메소드를 다시 만드는 것이다.
  	4. 자식 클래스가 메소드를 다시 만들 때는 애너테이션(Annotation) 중 @Override를 추가한다.
+ 	5. 부모가 가진 메소드를 자식이 다시 만들었을때 오버라이드 !
  */
 
 public class Americano extends Espresso {
