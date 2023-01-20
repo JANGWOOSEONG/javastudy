@@ -21,7 +21,17 @@ public class 문제 {
 			case "가위" : idx2 = 0; break;
 			case "바위" : idx2 = 1; break;
 			default: idx2 = 2;
+			}                            
+			String result = null;
+			switch (idx2 - idx1) {
+			case 0 : result = "비겼습니다";
+					break;
+			case -2:
+			case 1: result = "이겼습니다";
+					break;
+			default: result = "졌습니다";
 			}
+			System.out.println("컴퓨터는 " + player[idx1] + ", 당신은 " + player[idx2] + ", " + result);
 			
 			
 			sc.close();

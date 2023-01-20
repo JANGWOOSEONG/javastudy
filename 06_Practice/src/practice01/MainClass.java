@@ -1,5 +1,7 @@
 package practice01;
 
+import java.util.Scanner;
+
 public class MainClass {
 
 	// 문제1. 가위바위보
@@ -9,6 +11,18 @@ public class MainClass {
 	// Hint : 가위는 0, 바위는 1, 보는 2로 처리한다.
 	public static void ex01() {
 		
+		String[] player = {"가위","바위","보"};
+		int idx1 = (int)(Math.random() * 3);
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("가위바위보 !!! >>>");
+		int idx2;
+		switch (sc.next()) {
+		case "가위" : idx2 = 0; break;
+		case "바위" : idx2 = 1; break;
+		default : idx2 = 2;
+	}
+	
 	}
 	
 	// 문제2. 친구 3명을 저장할 수 있는 배열을 생성하고 임의의 값으로 초기화하시오.
@@ -94,7 +108,7 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex10();
+		ex01();
 	}
 
 }
