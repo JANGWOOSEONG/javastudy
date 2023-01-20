@@ -11,6 +11,8 @@ public class ParkingLot {
 	
 	public ParkingLot(String name) {
 		this.name = name;
+		
+		
 		cars = new Car[10];
 		sc = new Scanner(System.in);
 	}
@@ -32,11 +34,51 @@ public class ParkingLot {
 	
 	public void deleteCar() {
 		
-	}
+		if(idx == 0 ) {
+			System.out.println("등록된 차량이 없습니다.");
+			return;
+			}
+			System.out.println("제거할 차량번호 >>> ");
+			String delcarNo = sc.next();
+			for(int i = 0; i < idx; i++) {
+				Car car = cars[i];
+				if(delcarNo.equals(car.getCarNo())) {
+					
+					System.arraycopy(cars, i + 1, cars, i, idx - i - 1);
+					cars[--idx] = null;
+					System.out.println("차량번호 " + delcarNo + "인 차량이 삭제되었습니다");
+					return;
+					
+					/*
+					 마지막 차량을 옮겨오기
+					 제거할 차량의 위치 : i
+					 마지막 차량의 위치 : idx -1
+					cars[i] = cars[idx - 1];
+					cars[--idx] = null;
+					return;
+					*/
+				}
+			}
+			System.out.println("대상 차량이 존재하지 않습니다.");
+}
+	
 	
 	public void printAllCars() {
 		
+		if(idx == 0 ) {
+			System.out.println("등록된 차량이 없습니다.");
+			return;
+			}
+			String AllCars = sc.next();
+			System.out.println(name + " 차량 목록");
+			for(int i = 0; i < idx; i++) {
+				Car car = cars[i];
+				System.out.println(car);
+				
+			}
+		
 	}
+	
 	
 	public void manage() {
 		
