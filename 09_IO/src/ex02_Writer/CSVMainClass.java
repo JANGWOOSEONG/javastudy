@@ -39,19 +39,19 @@ public class CSVMainClass {
 		
 		product1.put("model", "세탁기");
 		product1.put("maker", "삼성");
-		product1.put("price", "100");
+		product1.put("price", 100);
 		
 		Map<String, Object> product2 = new HashMap<String, Object>();
 		
 		product2.put("model", "냉장고");
 		product2.put("maker", "삼성");
-		product2.put("price", "200");
+		product2.put("price", 200);
 		
 		Map<String, Object> product3 = new HashMap<String, Object>();
 		
 		product3.put("model", "티비");
 		product3.put("maker", "삼성");
-		product3.put("price", "300");
+		product3.put("price", 300);
 		
 		List<Map<String, Object>> products = Arrays.asList(product1, product2, product3);
 		

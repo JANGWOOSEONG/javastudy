@@ -41,6 +41,7 @@ public class MainClass {
 	}
 	
 	public static void ex02() throws IOException { // 예외 처리를 ex02 메소드를 호출한 곳으로 넘긴다.
+	
 		
 		File dir = new File("C:" + File.separator + "storage");
 		if(dir.exists()==false) {
