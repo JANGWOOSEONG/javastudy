@@ -1,11 +1,18 @@
 package practice;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -248,12 +255,75 @@ public class MainClass {
 			e.printStackTrace();
 		} 
 	}
+	// 문제7. System.in은 키보드로부터 바이트 데이터를 입력 받는 InputStream 입니다.
+	// System.in으로부터 문장 1개를 입력 받아서 출력하시오.
+	// Scanner 대신 BufferedReader를 사용하시오.
+	public static void ex07() {
+		
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new InputStreamReader(System.in));
+			
+			System.out.println("문장 입력 >>>");
+			String sentence = br.readLine();
+			
+			System.out.println("입력된 문장 : " + sentence);
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(br != null) {
+					br.close();
+				}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+	}
 	
+	// 문제8. C:\GDJ61\installer\eclipse-jee-2021-03-R-win32-x86_64.zip 파일을
+	// C:\storage\eclipse.zip으로 복사하시오.
+	public static void ex08() {
+		
+		String sep = File.separator;
+		File from = new File("C:" + sep + "GDJ61"+ sep + "installer" + sep , "연습.txt");		
+		File to = new File("C:" + sep + "storage" , "eclipse.zip");
+		BufferedInputStream bin = null;
+		BufferedOutputStream bout = null;
+		
+		try {
+			
+			bin = new BufferedInputStream(new FileInputStream(from));
+			bout = new BufferedOutputStream(new FileOutputStream(to));
+			
+			byte[] b = new byte[1024]; // 1킬로 바이트
+			int readByte = 0;
+			while((readByte = bin.read(b)) != -1) {
+				bout.write(b, 0, readByte);
+			}
+			System.out.println("복사 완료되었다.");
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(bout != null) { bout.close();}
+				if(bin != null) { bin.close();}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		}			
+	}
+   public static void ex09() {
+	   
+	   System.out.println("Hello world");
+		
+		
+	}
+   public static void main(String[] args) {
+	ex09();
 	
-	
-public static void main(String[] args) {
-	ex06();
 }
 }
-
-
