@@ -13,6 +13,15 @@ public class JSONMainClass {
 	
 	public static void ex01() {
 		
+		/*
+		한국환경공단_에어코리아_대기오염정보 : 시도별 실시간 측정정보 조회
+		1. 서비스 URL : http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty
+		2. 요청 변수(Request Parameter)
+			1) serviceKey : 인증키
+			2) returnType : xml 또는 json
+			3) sidoName : 시도 이름
+	*/
+		
 		String serviceKey = "+f/VvIFrOCH3yNpYRLtlzkRhGrcaNqFwC9h0/SG9sN5VAODPFeTbdVv8DFfJvv3InTg5ho9Q3hcHJMgAdMOQtg==";
 		String apiURL = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty";
 		URL url = null;
@@ -65,6 +74,15 @@ public class JSONMainClass {
 			e.printStackTrace();
 		}
 	}
+	
+	/*
+	한국환경공단_에어코리아_대기오염정보 : 시도별 실시간 측정정보 조회
+	1. 서비스 URL : http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustWeekFrcstDspth
+	2. 요청 변수(Request Parameter)
+		1) serviceKey : 인증키
+		2) returnType : xml 또는 json
+		3) searchDate : 통보시간 검색
+    */
 	
 	public static void ex02() {
 		
