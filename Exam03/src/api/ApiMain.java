@@ -57,6 +57,7 @@ public class ApiMain{
 			while((line = reader.readLine()) != null) {
 				sb.append(line);
 			}
+			System.out.println(sb.toString());
 			//이제 API의 응답 데이터는 SB에 저장되어있다.
 			//System.out.println(sb.toString());
 			// API의 응답 데이터를 분석하기 위해서 JSONObiect로 변환한다.
